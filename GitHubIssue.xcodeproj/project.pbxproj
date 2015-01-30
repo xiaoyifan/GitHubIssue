@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		CC45292C1A79C6D100CB482A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC45292B1A79C6D100CB482A /* main.m */; };
 		CC45292F1A79C6D100CB482A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC45292E1A79C6D100CB482A /* AppDelegate.m */; };
-		CC4529321A79C6D100CB482A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4529311A79C6D100CB482A /* FirstViewController.m */; };
-		CC4529351A79C6D100CB482A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4529341A79C6D100CB482A /* SecondViewController.m */; };
 		CC4529381A79C6D100CB482A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4529361A79C6D100CB482A /* Main.storyboard */; };
 		CC45293A1A79C6D200CB482A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4529391A79C6D200CB482A /* Images.xcassets */; };
 		CC45293D1A79C6D200CB482A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC45293B1A79C6D200CB482A /* LaunchScreen.xib */; };
@@ -33,10 +31,6 @@
 		CC45292B1A79C6D100CB482A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC45292D1A79C6D100CB482A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC45292E1A79C6D100CB482A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CC4529301A79C6D100CB482A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		CC4529311A79C6D100CB482A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		CC4529331A79C6D100CB482A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		CC4529341A79C6D100CB482A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		CC4529371A79C6D100CB482A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC4529391A79C6D200CB482A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CC45293C1A79C6D200CB482A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -86,10 +80,6 @@
 			children = (
 				CC45292D1A79C6D100CB482A /* AppDelegate.h */,
 				CC45292E1A79C6D100CB482A /* AppDelegate.m */,
-				CC4529301A79C6D100CB482A /* FirstViewController.h */,
-				CC4529311A79C6D100CB482A /* FirstViewController.m */,
-				CC4529331A79C6D100CB482A /* SecondViewController.h */,
-				CC4529341A79C6D100CB482A /* SecondViewController.m */,
 				CC4529361A79C6D100CB482A /* Main.storyboard */,
 				CC4529391A79C6D200CB482A /* Images.xcassets */,
 				CC45293B1A79C6D200CB482A /* LaunchScreen.xib */,
@@ -173,6 +163,7 @@
 				TargetAttributes = {
 					CC4529251A79C6D100CB482A = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 4NPA9YHQ69;
 					};
 					CC4529411A79C6D200CB482A = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -224,9 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4529351A79C6D100CB482A /* SecondViewController.m in Sources */,
 				CC45292F1A79C6D100CB482A /* AppDelegate.m in Sources */,
-				CC4529321A79C6D100CB482A /* FirstViewController.m in Sources */,
 				CC45292C1A79C6D100CB482A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GitHubIssue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GitHubIssue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,6 +411,7 @@
 				CC45294E1A79C6D200CB482A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC45294F1A79C6D200CB482A /* Build configuration list for PBXNativeTarget "GitHubIssueTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +420,7 @@
 				CC4529511A79C6D200CB482A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
