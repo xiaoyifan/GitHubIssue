@@ -10,6 +10,15 @@
 
 @interface IssueDetailViewController : UIViewController
 
-@property (strong, nonatomic) NSDictionary *currentIssue;
+
+@property (nonatomic, weak) IBOutlet UILabel *issueTitle;
+@property (nonatomic, weak) IBOutlet UILabel *issueNumber;
+@property (nonatomic, weak) IBOutlet UILabel *author;
+@property (nonatomic, weak) IBOutlet UITextView *body;
+@property (nonatomic, weak) IBOutlet UILabel *updateTime;
+
+
+@property (strong, nonatomic) NSDictionary * currentIssue;
+
 
 @end

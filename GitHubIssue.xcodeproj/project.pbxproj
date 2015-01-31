@@ -108,6 +108,8 @@
 				CCCDEC151A7C7B3B00867566 /* allIssue */,
 				CCCDEC141A7C7B2200867566 /* issue */,
 				CC4529361A79C6D100CB482A /* Main.storyboard */,
+				CCCDEBFC1A7C386A00867566 /* IssueTableViewController.h */,
+				CCCDEBFD1A7C386A00867566 /* IssueTableViewController.m */,
 				CCCDEC0E1A7C434F00867566 /* IssueDetailViewController.h */,
 				CCCDEC0F1A7C434F00867566 /* IssueDetailViewController.m */,
 				CCCDEC051A7C3B8500867566 /* CircleViewController.h */,
@@ -149,8 +151,6 @@
 		CCCDEC141A7C7B2200867566 /* issue */ = {
 			isa = PBXGroup;
 			children = (
-				CCCDEBFC1A7C386A00867566 /* IssueTableViewController.h */,
-				CCCDEBFD1A7C386A00867566 /* IssueTableViewController.m */,
 				CCCDEC0B1A7C3E4300867566 /* IssueTableViewCell.h */,
 				CCCDEC0C1A7C3E4300867566 /* IssueTableViewCell.m */,
 			);

@@ -36,7 +36,8 @@
     [[UILabel appearanceWhenContainedIn:[UITableViewCell class], nil]
      setTextColor:[UIColor purpleColor]];
     [[UILabel appearanceWhenContainedIn:[UIViewController class], nil] setTextColor:[UIColor purpleColor]];
-    
+    [[UITextView appearance] setTintColor:[UIColor purpleColor]];
+    [[UITextView appearanceWhenContainedIn:[UIViewController class], nil] setTextColor:[UIColor purpleColor]];
        
 }
 

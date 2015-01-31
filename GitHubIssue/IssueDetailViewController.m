@@ -9,7 +9,7 @@
 #import "IssueDetailViewController.h"
 
 @interface IssueDetailViewController ()
-
+@property (nonatomic, strong) NSString *url;
 @end
 
 @implementation IssueDetailViewController
@@ -17,11 +17,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+}
+
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.issueTitle.text = [self.currentIssue objectForKey:@"title"];
+    self.issueNumber.text = [NSString stringWithFormat:@"%@",[self.currentIssue objectForKey:@"number"]] ;
+    self.author.text =[[self.currentIssue objectForKey:@"user"] objectForKey:@"login"];
+    self.body.text =[self.currentIssue objectForKey:@"body"];
+    self.updateTime.text =[self.currentIssue objectForKey:@"updated_at"];
+    self.url=[self.currentIssue objectForKey:@"html_url"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)browseInSafari:(id)sender {
+    
+    NSURL *url = [NSURL URLWithString:self.url];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
 }
 
 /*

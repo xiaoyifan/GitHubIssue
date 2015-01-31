@@ -24,6 +24,16 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UIRefreshControl *pullDown2 = [[UIRefreshControl alloc] init];
+    pullDown2.tintColor = [UIColor grayColor];
+    [pullDown2 addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = pullDown2;
+    
+}
+
+-(void)refresh{
+    [self downloadGithubIssueData];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -54,6 +64,11 @@
                 // Remember that NSURLSession is downloading in the background
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.tableView reloadData];
+                    
+                    if(self.refreshControl.refreshing){
+                        [self.refreshControl endRefreshing];
+                        NSLog(@"refresh end");
+                    }
                 });
             }] resume];
 }

@@ -8,10 +8,12 @@
 
 #import "IssueTableViewController.h"
 #import "IssueTableViewCell.h"
+#import "IssueDetailViewController.h"
 
 @interface IssueTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *issueData;
+
 
 @end
 
@@ -25,6 +27,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UIRefreshControl *pullDown = [[UIRefreshControl alloc] init];
+    pullDown.tintColor = [UIColor grayColor];
+    [pullDown addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = pullDown;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +39,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) refresh{
+    // Refreshing Issues
+    NSLog(@"The tableView is refreshing.");
+    [self downloadGithubIssueData];
+}
 
 -(void)viewWillAppear:(BOOL)animated{
     
@@ -55,12 +67,17 @@
                                                                  options:NSJSONReadingAllowFragments
                                                                    error:&jsonError];
                 // Log the data for debugging
-                NSLog(@"DownloadeData:%@",self.issueData);
+                //NSLog(@"DownloadeData:%@",self.issueData);
                 
                 // Use dispatch_async to update the table on the main thread
                 // Remember that NSURLSession is downloading in the background
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.tableView reloadData];
+                    
+                    if(self.refreshControl.refreshing){
+                        [self.refreshControl endRefreshing];
+                        NSLog(@"refresh end");
+                    }
                 });
             }] resume];
 }
@@ -73,10 +90,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     // Return the number of rows in the section.
     NSUInteger num  = [self.issueData count];
-    NSLog(@"%lu",(unsigned long)num);
     return num;
 }
 
@@ -104,6 +119,9 @@
     
     return cell;
 }
+
+
+
 
 
 /*
@@ -140,14 +158,29 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // Pass the selected object to the new view controller
+    if ([[segue identifier] isEqualToString:@"moreDetail"]) {
+        NSLog(@"The method is called");
+        
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSDictionary * issueItem = [self.issueData objectAtIndex:indexPath.row];
+        
+        IssueDetailViewController *idvc  = [segue destinationViewController];
+        
+        [idvc setCurrentIssue:issueItem];
+        //idvc.currentIssue = issueItem;
+        
+    }
 }
-*/
+
+
 
 @end
