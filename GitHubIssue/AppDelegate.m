@@ -17,7 +17,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self setAttributes];
     return YES;
+}
+
+-(void)setAttributes{
+    [[UINavigationBar appearance] setTintColor:[UIColor purpleColor]];
+    [[UINavigationBar appearance] setBarStyle: UIBarStyleDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          [UIColor purpleColor], NSForegroundColorAttributeName,
+                                                          [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0], NSFontAttributeName,nil]];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationController class], nil]
+     setTintColor:[UIColor purpleColor]];
+    
+    
+    
+    [[UILabel appearanceWhenContainedIn:[UITableViewCell class], nil]
+     setTextColor:[UIColor purpleColor]];
+    [[UILabel appearanceWhenContainedIn:[UIViewController class], nil] setTextColor:[UIColor purpleColor]];
+    
+       
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

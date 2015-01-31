@@ -13,6 +13,14 @@
 		CC45293A1A79C6D200CB482A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4529391A79C6D200CB482A /* Images.xcassets */; };
 		CC45293D1A79C6D200CB482A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC45293B1A79C6D200CB482A /* LaunchScreen.xib */; };
 		CC4529491A79C6D200CB482A /* GitHubIssueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4529481A79C6D200CB482A /* GitHubIssueTests.m */; };
+		CCCDEBFE1A7C386A00867566 /* IssueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCDEBFD1A7C386A00867566 /* IssueTableViewController.m */; };
+		CCCDEC011A7C38A500867566 /* AllIssuesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCDEC001A7C38A500867566 /* AllIssuesTableViewController.m */; };
+		CCCDEC071A7C3B8500867566 /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCDEC061A7C3B8500867566 /* CircleViewController.m */; };
+		CCCDEC0A1A7C3D4C00867566 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCDEC091A7C3D4C00867566 /* TabViewController.m */; };
+		CCCDEC0D1A7C3E4300867566 /* IssueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCDEC0C1A7C3E4300867566 /* IssueTableViewCell.m */; };
+		CCCDEC101A7C434F00867566 /* IssueDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCDEC0F1A7C434F00867566 /* IssueDetailViewController.m */; };
+		CCCDEC131A7C7A6700867566 /* allIssueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCDEC121A7C7A6700867566 /* allIssueTableViewCell.m */; };
+		CCCDEC3A1A7C808300867566 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCDEC391A7C808300867566 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +45,21 @@
 		CC4529421A79C6D200CB482A /* GitHubIssueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubIssueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4529471A79C6D200CB482A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4529481A79C6D200CB482A /* GitHubIssueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubIssueTests.m; sourceTree = "<group>"; };
+		CCCDEBFC1A7C386A00867566 /* IssueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueTableViewController.h; sourceTree = "<group>"; };
+		CCCDEBFD1A7C386A00867566 /* IssueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueTableViewController.m; sourceTree = "<group>"; };
+		CCCDEBFF1A7C38A500867566 /* AllIssuesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllIssuesTableViewController.h; sourceTree = "<group>"; };
+		CCCDEC001A7C38A500867566 /* AllIssuesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllIssuesTableViewController.m; sourceTree = "<group>"; };
+		CCCDEC051A7C3B8500867566 /* CircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleViewController.h; path = ../CircleViewController.h; sourceTree = "<group>"; };
+		CCCDEC061A7C3B8500867566 /* CircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleViewController.m; path = ../CircleViewController.m; sourceTree = "<group>"; };
+		CCCDEC081A7C3D4C00867566 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		CCCDEC091A7C3D4C00867566 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+		CCCDEC0B1A7C3E4300867566 /* IssueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueTableViewCell.h; sourceTree = "<group>"; };
+		CCCDEC0C1A7C3E4300867566 /* IssueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueTableViewCell.m; sourceTree = "<group>"; };
+		CCCDEC0E1A7C434F00867566 /* IssueDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueDetailViewController.h; sourceTree = "<group>"; };
+		CCCDEC0F1A7C434F00867566 /* IssueDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueDetailViewController.m; sourceTree = "<group>"; };
+		CCCDEC111A7C7A6600867566 /* allIssueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allIssueTableViewCell.h; sourceTree = "<group>"; };
+		CCCDEC121A7C7A6700867566 /* allIssueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = allIssueTableViewCell.m; sourceTree = "<group>"; };
+		CCCDEC391A7C808300867566 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +103,17 @@
 			children = (
 				CC45292D1A79C6D100CB482A /* AppDelegate.h */,
 				CC45292E1A79C6D100CB482A /* AppDelegate.m */,
+				CCCDEC081A7C3D4C00867566 /* TabViewController.h */,
+				CCCDEC091A7C3D4C00867566 /* TabViewController.m */,
+				CCCDEC151A7C7B3B00867566 /* allIssue */,
+				CCCDEC141A7C7B2200867566 /* issue */,
 				CC4529361A79C6D100CB482A /* Main.storyboard */,
+				CCCDEC0E1A7C434F00867566 /* IssueDetailViewController.h */,
+				CCCDEC0F1A7C434F00867566 /* IssueDetailViewController.m */,
+				CCCDEC051A7C3B8500867566 /* CircleViewController.h */,
+				CCCDEC061A7C3B8500867566 /* CircleViewController.m */,
 				CC4529391A79C6D200CB482A /* Images.xcassets */,
+				CCCDEC391A7C808300867566 /* Media.xcassets */,
 				CC45293B1A79C6D200CB482A /* LaunchScreen.xib */,
 				CC4529291A79C6D100CB482A /* Supporting Files */,
 			);
@@ -112,6 +144,28 @@
 				CC4529471A79C6D200CB482A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCCDEC141A7C7B2200867566 /* issue */ = {
+			isa = PBXGroup;
+			children = (
+				CCCDEBFC1A7C386A00867566 /* IssueTableViewController.h */,
+				CCCDEBFD1A7C386A00867566 /* IssueTableViewController.m */,
+				CCCDEC0B1A7C3E4300867566 /* IssueTableViewCell.h */,
+				CCCDEC0C1A7C3E4300867566 /* IssueTableViewCell.m */,
+			);
+			name = issue;
+			sourceTree = "<group>";
+		};
+		CCCDEC151A7C7B3B00867566 /* allIssue */ = {
+			isa = PBXGroup;
+			children = (
+				CCCDEC111A7C7A6600867566 /* allIssueTableViewCell.h */,
+				CCCDEC121A7C7A6700867566 /* allIssueTableViewCell.m */,
+				CCCDEBFF1A7C38A500867566 /* AllIssuesTableViewController.h */,
+				CCCDEC001A7C38A500867566 /* AllIssuesTableViewController.m */,
+			);
+			name = allIssue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +251,7 @@
 			files = (
 				CC4529381A79C6D100CB482A /* Main.storyboard in Resources */,
 				CC45293D1A79C6D200CB482A /* LaunchScreen.xib in Resources */,
+				CCCDEC3A1A7C808300867566 /* Media.xcassets in Resources */,
 				CC45293A1A79C6D200CB482A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,8 +270,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCDEC0A1A7C3D4C00867566 /* TabViewController.m in Sources */,
+				CCCDEC101A7C434F00867566 /* IssueDetailViewController.m in Sources */,
+				CCCDEBFE1A7C386A00867566 /* IssueTableViewController.m in Sources */,
+				CCCDEC011A7C38A500867566 /* AllIssuesTableViewController.m in Sources */,
+				CCCDEC0D1A7C3E4300867566 /* IssueTableViewCell.m in Sources */,
 				CC45292F1A79C6D100CB482A /* AppDelegate.m in Sources */,
+				CCCDEC131A7C7A6700867566 /* allIssueTableViewCell.m in Sources */,
 				CC45292C1A79C6D100CB482A /* main.m in Sources */,
+				CCCDEC071A7C3B8500867566 /* CircleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
