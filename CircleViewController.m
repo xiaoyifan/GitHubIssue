@@ -7,9 +7,15 @@
 //
 
 #import "CircleViewController.h"
+#import "ViewController.h"
+#import "CircleView.h"
 
 @interface CircleViewController ()
+@property (strong, nonatomic) NSMutableArray *allIssueData;
 
+@property (weak, nonatomic) IBOutlet UILabel *openLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *closeLabel;
 @end
 
 @implementation CircleViewController
@@ -17,11 +23,67 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self downloadGithubIssueData];
+}
+
+-(void)downloadGithubIssueData{
+    
+    // GitHub API url
+    NSString *url = @"https://api.github.com/repos/uchicago-mobi/2015-Winter-Forum/issues?state=all";
+    
+    // Create NSUrlSession
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    // Create data download taks
+    [[session dataTaskWithURL:[NSURL URLWithString:url]
+            completionHandler:^(NSData *data,NSURLResponse *response,NSError *error) {
+                
+                NSError *jsonError;
+                self.allIssueData = [NSJSONSerialization JSONObjectWithData:data
+                                                                    options:NSJSONReadingAllowFragments
+                                                                      error:&jsonError];
+                // Log the data for debugging
+                // NSLog(@"DownloadeData:%@",self.allIssueData);
+                
+                // Use dispatch_async to update the table on the main thread
+                // Remember that NSURLSession is downloading in the background
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    int openNumber  = 0;
+                    int closedNumber  = 0;
+                    
+                    for (NSDictionary* obj in self.allIssueData) {
+                        if ([[obj objectForKey:@"state"] isEqualToString:@"open"]) {
+                            openNumber++;
+                        }
+                        else{
+                            closedNumber++;
+                             }
+                    }
+                    
+                    CircleView *drawView = (CircleView *)self.view;
+                    drawView.openNum = openNumber;
+                    drawView.closedNum = closedNumber;
+                    
+                    self.openLabel.text = [[NSString alloc] initWithFormat:@"%d Open Issues", openNumber];
+                    self.closeLabel.text = [[NSString alloc] initWithFormat:@"%d Closed Issues", closedNumber];
+                    
+                    [self.view setNeedsDisplay];
+                    
+                    
+                });
+            }] resume];
 }
 
 /*

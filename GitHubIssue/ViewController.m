@@ -1,18 +1,18 @@
 //
-//  TabViewController.m
+//  ViewController.m
 //  GitHubIssue
 //
-//  Created by XiaoYifan on 1/30/15.
+//  Created by XiaoYifan on 1/31/15.
 //  Copyright (c) 2015 XiaoYifan. All rights reserved.
 //
 
-#import "TabViewController.h"
+#import "ViewController.h"
 
-@interface TabViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation TabViewController
+@implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

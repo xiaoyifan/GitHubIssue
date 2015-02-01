@@ -8,7 +8,7 @@
 
 #import "IssueTableViewController.h"
 #import "IssueTableViewCell.h"
-#import "IssueDetailViewController.h"
+#import "detailTableViewController.h"
 
 @interface IssueTableViewController ()
 
@@ -67,7 +67,7 @@
                                                                  options:NSJSONReadingAllowFragments
                                                                    error:&jsonError];
                 // Log the data for debugging
-                //NSLog(@"DownloadeData:%@",self.issueData);
+                NSLog(@"DownloadeData:%@",self.issueData);
                 
                 // Use dispatch_async to update the table on the main thread
                 // Remember that NSURLSession is downloading in the background
@@ -173,7 +173,7 @@
         
         NSDictionary * issueItem = [self.issueData objectAtIndex:indexPath.row];
         
-        IssueDetailViewController *idvc  = [segue destinationViewController];
+        detailTableViewController *idvc  = [segue destinationViewController];
         
         [idvc setCurrentIssue:issueItem];
         //idvc.currentIssue = issueItem;
