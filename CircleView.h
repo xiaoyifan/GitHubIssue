@@ -10,7 +10,7 @@
 
 @interface CircleView : UIView
 
-@property int openNum;
-@property int closedNum;
+@property int openNumber;
+@property int closedNumber;
 
 @end

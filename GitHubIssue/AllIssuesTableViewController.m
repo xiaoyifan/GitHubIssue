@@ -8,6 +8,8 @@
 
 #import "AllIssuesTableViewController.h"
 #import "IssueTableViewCell.h"
+#import "IssueTableViewController.h"
+#import "detailTableViewController.h"
 @interface AllIssuesTableViewController ()
 
 @property (strong, nonatomic) NSMutableArray *allIssueData;
@@ -18,17 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    //Initialize the RefreshControl in second UIViewController
     UIRefreshControl *pullDown2 = [[UIRefreshControl alloc] init];
     pullDown2.tintColor = [UIColor grayColor];
     [pullDown2 addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = pullDown2;
+    
+
+    
     
 }
 
@@ -112,56 +113,33 @@
         cell.imageStatus.image =[UIImage imageNamed:@"Image-boxClosed.png"];
     }
     
-    
-
-    
-    
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // Pass the selected object to the new view controller
+    if ([[segue identifier] isEqualToString:@"AllDetail"]) {
+        NSLog(@"The method is called");
+        
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSDictionary * issueItem = [self.allIssueData objectAtIndex:indexPath.row];
+        
+        detailTableViewController *idvc  = [segue destinationViewController];
+        
+        [idvc setCurrentIssue:issueItem];
+        //idvc.currentIssue = issueItem;
+        
+    }
 }
-*/
+
 
 @end

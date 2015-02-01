@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CC0422D31A7D59E500BB4314 /* detailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0422D21A7D59E500BB4314 /* detailTableViewController.m */; };
-		CC0422D61A7DB1BE00BB4314 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0422D51A7DB1BE00BB4314 /* ViewController.m */; };
 		CC0422DC1A7DB36500BB4314 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0422DB1A7DB36500BB4314 /* CircleView.m */; };
 		CC45292C1A79C6D100CB482A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC45292B1A79C6D100CB482A /* main.m */; };
 		CC45292F1A79C6D100CB482A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC45292E1A79C6D100CB482A /* AppDelegate.m */; };
@@ -37,8 +36,6 @@
 /* Begin PBXFileReference section */
 		CC0422D11A7D59E500BB4314 /* detailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detailTableViewController.h; path = ../detailTableViewController.h; sourceTree = "<group>"; };
 		CC0422D21A7D59E500BB4314 /* detailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = detailTableViewController.m; path = ../detailTableViewController.m; sourceTree = "<group>"; };
-		CC0422D41A7DB1BE00BB4314 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CC0422D51A7DB1BE00BB4314 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC0422DA1A7DB36500BB4314 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleView.h; path = ../CircleView.h; sourceTree = "<group>"; };
 		CC0422DB1A7DB36500BB4314 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleView.m; path = ../CircleView.m; sourceTree = "<group>"; };
 		CC4529261A79C6D100CB482A /* GitHubIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,12 +101,8 @@
 		CC4529281A79C6D100CB482A /* GitHubIssue */ = {
 			isa = PBXGroup;
 			children = (
-				CC45292D1A79C6D100CB482A /* AppDelegate.h */,
-				CC45292E1A79C6D100CB482A /* AppDelegate.m */,
 				CC0422DA1A7DB36500BB4314 /* CircleView.h */,
 				CC0422DB1A7DB36500BB4314 /* CircleView.m */,
-				CC0422D41A7DB1BE00BB4314 /* ViewController.h */,
-				CC0422D51A7DB1BE00BB4314 /* ViewController.m */,
 				CC4529361A79C6D100CB482A /* Main.storyboard */,
 				CCCDEC051A7C3B8500867566 /* CircleViewController.h */,
 				CCCDEC061A7C3B8500867566 /* CircleViewController.m */,
@@ -126,6 +119,8 @@
 		CC4529291A79C6D100CB482A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC45292D1A79C6D100CB482A /* AppDelegate.h */,
+				CC45292E1A79C6D100CB482A /* AppDelegate.m */,
 				CC45292A1A79C6D100CB482A /* Info.plist */,
 				CC45292B1A79C6D100CB482A /* main.m */,
 			);
@@ -275,7 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0422D61A7DB1BE00BB4314 /* ViewController.m in Sources */,
 				CCCDEBFE1A7C386A00867566 /* IssueTableViewController.m in Sources */,
 				CCCDEC011A7C38A500867566 /* AllIssuesTableViewController.m in Sources */,
 				CCCDEC0D1A7C3E4300867566 /* IssueTableViewCell.m in Sources */,

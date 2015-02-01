@@ -7,7 +7,7 @@
 //
 
 #import "CircleViewController.h"
-#import "ViewController.h"
+
 #import "CircleView.h"
 
 @interface CircleViewController ()
@@ -37,6 +37,7 @@
     [self downloadGithubIssueData];
 }
 
+#pragma mark - DataFetch
 -(void)downloadGithubIssueData{
     
     // GitHub API url
@@ -73,11 +74,11 @@
                     }
                     
                     CircleView *drawView = (CircleView *)self.view;
-                    drawView.openNum = openNumber;
-                    drawView.closedNum = closedNumber;
+                    drawView.openNumber = openNumber;
+                    drawView.closedNumber = closedNumber;
                     
-                    self.openLabel.text = [[NSString alloc] initWithFormat:@"%d Open Issues", openNumber];
-                    self.closeLabel.text = [[NSString alloc] initWithFormat:@"%d Closed Issues", closedNumber];
+                    self.openLabel.text = [[NSString alloc] initWithFormat:@"%d Issues Open", openNumber];
+                    self.closeLabel.text = [[NSString alloc] initWithFormat:@"%d Issues Closed", closedNumber];
                     
                     [self.view setNeedsDisplay];
                     
