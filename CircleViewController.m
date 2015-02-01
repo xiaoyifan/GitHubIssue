@@ -14,15 +14,29 @@
 @property (strong, nonatomic) NSMutableArray *allIssueData;
 
 @property (weak, nonatomic) IBOutlet UILabel *openLabel;
+@property (weak, nonatomic) IBOutlet UILabel *openColorLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *closeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *closeColorLabel;
+
+
+
 @end
 
 @implementation CircleViewController
 
+#pragma mark-viewDidLoad and customize UI for iPad
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.closeColorLabel.center = CGPointMake((float)self.view.frame.size.width*0.35, (float)self.view.frame.size.height*0.75);
+    
+    self.openColorLabel.center = CGPointMake((float)self.view.frame.size.width*0.35, (float)self.view.frame.size.height*0.8);
+    
+    self.closeLabel.center =CGPointMake((float)self.view.frame.size.width*0.35+self.openLabel.frame.size.width/2+35, (float)self.view.frame.size.height*0.75);
+    
+    self.openLabel.center =CGPointMake((float)self.view.frame.size.width*0.35+self.openLabel.frame.size.width/2+35, (float)self.view.frame.size.height*0.8);
     
 }
 
@@ -34,7 +48,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     
-    [self downloadGithubIssueData];
+    //[self downloadGithubIssueData];
 }
 
 #pragma mark - DataFetch
